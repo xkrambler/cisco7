@@ -7,7 +7,16 @@ Simply copy cisco7.php where you want and include it in your code.
 require_once("cisco7.php");
 ```
 
-## Usage
+## Usage (Static)
+```
+require_once("cisco7.php");
+$o="example";
+echo "Original.: ".$o."\n";
+echo "Encrypted: ".($e=Cisco7::encrypt($o))."\n"; // 02031C5A06160324
+echo "Decrypted: ".($d=Cisco7::decrypt($e))."\n"; // example
+```
+
+## Usage (Dynamic)
 ```
 require_once("cisco7.php");
 $c=new Cisco7();
